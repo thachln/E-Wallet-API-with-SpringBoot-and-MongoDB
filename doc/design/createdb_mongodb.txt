@@ -1,0 +1,11 @@
+mongosh -u admin -p <password> --authenticationDatabase admin
+use ewallet
+
+db.createUser({
+  user: "ewallet_user",
+  pwd: "Ewallet!123",
+  roles: [{ role: "readWrite", db: "ewallet" }]
+})
+
+
+mongodb://xapi_lrs_user:*****@server:27017/?authSource=xapi_lrs&authMechanism=DEFAULT
